@@ -1,0 +1,16 @@
+pandas
+numpy
+mlflow==2.2.2
+notebook
+scikit-learn
+matplotlib
+python-box==6.0.2
+pyYAML
+tdqm
+ensure==1.0.2
+joblib
+types-pyYAML
+Flask
+Flask-Cors
+-e .            # Local package, ensure it is installed in editable mode ( it will use the setup.py in the current directory)
+                # this -e . will be used to pickup the setup.py automatically. 
