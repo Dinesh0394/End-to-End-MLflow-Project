@@ -1,0 +1,44 @@
+# whenever you try to execute your training pipeline, it will create a folder callled artifacts.
+# Inside that folder, it will create subfolders for each step of the pipeline.
+
+
+
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_URL: https://github.com/entbappy/Branching-tutorial/raw/master/winequality-data.zip # URL to download the dataset, 
+                                                                                             # currently it is downloaded from the tutor's repo you can change it accordig to your project
+  local_data_file: artifacts/data_ingestion/data.zip    # local path where the downloaded file from above link will be stored 
+  unzip_dir: artifacts/data_ingestion                   # directory where the downloaded file will be unzipped
+
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/winequality-red.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
+
+
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/winequality-red.csv
+
+
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  train_data_path: artifacts/data_transformation/train.csv
+  test_data_path: artifacts/data_transformation/test.csv
+  model_name: model.joblib
+
+
+
+model_evaluation:
+  root_dir: artifacts/model_evaluation
+  test_data_path: artifacts/data_transformation/test.csv
+  model_path: artifacts/model_trainer/model.joblib
+  metric_file_name: artifacts/model_evaluation/metrics.json
+

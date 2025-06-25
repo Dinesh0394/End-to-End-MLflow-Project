@@ -1,4 +1,11 @@
+# This is a setup.py file for a Python package.
+# It uses setuptools to package the source code located in the "src" directory.
+#  it will look for constructor.py files in the "src" directory and its subdirectories to identify the packages and install this package as my local package.
+# to intsall this package as a local package, we need setup.py file. 
+
+
 import setuptools
+
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -27,8 +34,3 @@ setuptools.setup(
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src")
 )
-
-# This is a setup.py file for a Python package.
-# It uses setuptools to package the source code located in the "src" directory.
-#  it will look for constructor.py files in the "src" directory and its subdirectories to identify the packages and install this package as my local package.
-# to intsall this package as a local package, we need setup.py file. 
