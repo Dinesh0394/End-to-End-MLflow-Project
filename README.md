@@ -63,7 +63,7 @@ add(1, "2")  # Raises TypeError: Expected type 'int' for argument 'b', got 'str'
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+https://github.com/Dinesh0394/End-to-End-MLflow-Project
 ```
 ### STEP 01- Create a conda environment after opening the repository
 
@@ -105,20 +105,21 @@ open up you local host and port
 ### dagshub
 [dagshub](https://dagshub.com/)
 
-MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow \
-MLFLOW_TRACKING_USERNAME=entbappy \
-MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0 \
+MLFLOW_TRACKING_URI=https://dagshub.com/Dinesh0394/End-to-End-MLflow-Project \
+MLFLOW_TRACKING_USERNAME=Dinesh0394 \
+MLFLOW_TRACKING_PASSWORD=8e8125d5c1bdbf2d7ad07fe0e666ff6febbfbe12 \
 python script.py
+
 
 Run this to export as env variables:
 
 ```bash
 
-export MLFLOW_TRACKING_URI=https://dagshub.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow.mlflow
+export MLFLOW_TRACKING_URI=https://dagshub.com/Dinesh0394/End-to-End-MLflow-Project
 
-export MLFLOW_TRACKING_USERNAME=entbappy 
+export MLFLOW_TRACKING_USERNAME=Dinesh0394
 
-export MLFLOW_TRACKING_PASSWORD=6824692c47a369aa6f9eac5b10041d5c8edbcef0
+export MLFLOW_TRACKING_PASSWORD=8e8125d5c1bdbf2d7ad07fe0e666ff6febbfbe12
 
 ```
 
