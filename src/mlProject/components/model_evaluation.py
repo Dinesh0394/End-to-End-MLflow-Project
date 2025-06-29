@@ -48,7 +48,7 @@ class ModelEvaluation:
             }
 
             save_json(
-                file_path=os.path.join(self.config.root_dir, self.config.metric_file_name),
+                path=Path(self.config.metric_file_name),
                 data=scores
             )
 
@@ -65,7 +65,4 @@ class ModelEvaluation:
                     registered_model_name="ElasticnetModel"
                                     )   
             else:
-                mlflow.sklearn.log_model(
-                    sk_model=model,
-                    artifact_path=os.path.join(self.config.root_dir, "model")
-                )
+                mlflow.sklearn.log_model(model, "model")

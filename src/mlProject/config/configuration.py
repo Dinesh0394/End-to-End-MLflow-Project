@@ -70,8 +70,9 @@ class ConfigurationManager:
 
     def get_model_training_config(self)-> ModelTrainingConfig:
         config = self.config.model_trainer
-        params = self.params.ElasticNet
+        params = self.params.ElasticNet 
         schema = self.schema.TARGET_COLUMN
+        create_directories([config.root_dir])
         
         
         model_training_config = ModelTrainingConfig(
@@ -90,6 +91,8 @@ class ConfigurationManager:
         params = self.params.ElasticNet
         schema = self.schema.TARGET_COLUMN
 
+        create_directories([config.root_dir])
+
         model_evaluation_config = ModelEvaluationConfig(
             root_dir=config.root_dir,
             model_path=config.model_path,
@@ -97,6 +100,6 @@ class ConfigurationManager:
             metric_file_name=config.metric_file_name,
             test_data_path=config.test_data_path,
             target_column=schema.name,
-            mlflow_uri=config.mlflow_uri
+            mlflow_uri= "https://dagshub.com/Dinesh0394/End-to-End-MLflow-Project.mlflow"
         )
         return model_evaluation_config
